@@ -8,14 +8,14 @@ HMAC-SHA256 request signing, rotating-file logging, and a user-friendly confirma
 
 ## Features
 
-- ✅ Place **MARKET**, **LIMIT**, and **STOP_LIMIT** orders
-- ✅ Supports **BUY** and **SELL** sides
-- ✅ Input validation before any API call is made
-- ✅ HMAC-SHA256 signed requests
-- ✅ Rotating log files (5 MB cap, 3 backups)
-- ✅ Confirmation prompt before order execution
-- ✅ Structured separation of CLI, API, and validation layers
-- ✅ API keys loaded securely from environment variables — never hardcoded
+-  Place **MARKET**, **LIMIT**, and **STOP_LIMIT** orders
+-  Supports **BUY** and **SELL** sides
+-  Input validation before any API call is made
+-  HMAC-SHA256 signed requests
+-  Rotating log files (5 MB cap, 3 backups)
+-  Confirmation prompt before order execution
+-  Structured separation of CLI, API, and validation layers
+-  API keys loaded securely from environment variables — never hardcoded
 
 ---
 
@@ -94,10 +94,10 @@ python cli.py --symbol BTCUSDT --side SELL --order-type STOP_LIMIT \
 
 | Argument | Required | Description |
 |---|---|---|
-| `--symbol` | ✅ | Trading pair e.g. `BTCUSDT` |
-| `--side` | ✅ | `BUY` or `SELL` |
-| `--order-type` | ✅ | `MARKET`, `LIMIT`, or `STOP_LIMIT` |
-| `--quantity` | ✅ | Order quantity e.g. `0.001` |
+| `--symbol`| Trading pair e.g. `BTCUSDT` |
+| `--side` | `BUY` or `SELL` |
+| `--order-type` | `MARKET`, `LIMIT`, or `STOP_LIMIT` |
+| `--quantity`  | Order quantity e.g. `0.001` |
 | `--price` | For LIMIT / STOP_LIMIT | Limit price |
 | `--stop-price` | For STOP_LIMIT | Stop trigger price |
 
@@ -117,7 +117,7 @@ python cli.py --symbol BTCUSDT --side SELL --order-type STOP_LIMIT \
 └───────────────────────────────────┘
 Confirm order? (yes/no): yes
 
-✅ Order placed successfully!
+ Order placed successfully!
 ┌───────────────────────────────────┐
 │ Order ID      : 123456789         │
 │ Status        : NEW               │
