@@ -1,0 +1,58 @@
+[2026-03-19 19:38:15,448] [INFO] [cli] - Order cancelled by user.
+[2026-03-19 19:43:03,080] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:43:03,081] [INFO] [orders] - Placing MARKET BUY order: 0.001 BTCUSDT
+[2026-03-19 19:43:03,082] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1773929583081}
+[2026-03-19 19:43:03,744] [DEBUG] [client] - Response [401]: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+[2026-03-19 19:43:03,744] [ERROR] [cli] - API error — HTTP 401 | code -2015 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+Traceback (most recent call last):
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/cli.py", line 160, in main
+    result = place_market_order(client, symbol, side, quantity)
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/bot/orders.py", line 51, in place_market_order
+    raw = client.place_order(params)
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/bot/client.py", line 150, in place_order
+    raise APIError(
+bot.client.APIError: Binance API Error -2015: Invalid API-key, IP, or permissions for action (HTTP 401)
+[2026-03-19 19:48:56,526] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:48:56,527] [INFO] [orders] - Placing MARKET BUY order: 0.001 BTCUSDT
+[2026-03-19 19:48:56,528] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1773929936528}
+[2026-03-19 19:48:57,000] [DEBUG] [client] - Response [400]: {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+[2026-03-19 19:48:57,000] [ERROR] [cli] - API error — HTTP 400 | code -4164 | body: {"code":-4164,"msg":"Order's notional must be no smaller than 100 (unless you choose reduce only)."}
+Traceback (most recent call last):
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/cli.py", line 160, in main
+    result = place_market_order(client, symbol, side, quantity)
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/bot/orders.py", line 51, in place_market_order
+    raw = client.place_order(params)
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/bot/client.py", line 150, in place_order
+    raise APIError(
+bot.client.APIError: Binance API Error -4164: Order's notional must be no smaller than 100 (unless you choose reduce only). (HTTP 400)
+[2026-03-19 19:49:34,718] [ERROR] [cli] - Configuration error: BINANCE_API_KEY and BINANCE_API_SECRET environment variables must be set. See README.md for instructions.
+Traceback (most recent call last):
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/cli.py", line 156, in main
+    client = BinanceFuturesClient()
+  File "/Users/hiteshumesh/Desktop/Binance/trading_bot/bot/client.py", line 59, in __init__
+    raise EnvironmentError(
+OSError: BINANCE_API_KEY and BINANCE_API_SECRET environment variables must be set. See README.md for instructions.
+[2026-03-19 19:50:26,221] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:50:26,223] [INFO] [orders] - Placing MARKET BUY order: 0.002 BTCUSDT
+[2026-03-19 19:50:26,223] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002, 'timestamp': 1773930026223}
+[2026-03-19 19:50:26,776] [DEBUG] [client] - Response [200]: {"orderId":12880577183,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"vdPqkZPm6EfKJMiEDBggeI","price":"0.00","avgPrice":"0.00","origQty":"0.002","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1773930026681}
+[2026-03-19 19:50:26,776] [INFO] [orders] - MARKET order result: {'orderId': 12880577183, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:50:26,777] [INFO] [cli] - Order placed successfully: {'orderId': 12880577183, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:50:59,988] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:50:59,988] [INFO] [orders] - Placing MARKET BUY order: 0.005 BTCUSDT
+[2026-03-19 19:50:59,989] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1773930059989}
+[2026-03-19 19:51:00,400] [DEBUG] [client] - Response [200]: {"orderId":12880581105,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"Jym7p5dv3lejdOiTHzXcyD","price":"0.00","avgPrice":"0.00","origQty":"0.005","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1773930060315}
+[2026-03-19 19:51:00,400] [INFO] [orders] - MARKET order result: {'orderId': 12880581105, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:51:00,401] [INFO] [cli] - Order placed successfully: {'orderId': 12880581105, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:51:39,820] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:51:39,821] [INFO] [orders] - Placing MARKET SELL order: 0.005 BTCUSDT
+[2026-03-19 19:51:39,821] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': 0.005, 'timestamp': 1773930099821}
+[2026-03-19 19:51:40,505] [DEBUG] [client] - Response [200]: {"orderId":12880591440,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"CoSKqjRKPwFLTCBke0ceJ3","price":"0.00","avgPrice":"0.00","origQty":"0.005","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1773930100375}
+[2026-03-19 19:51:40,505] [INFO] [orders] - MARKET order result: {'orderId': 12880591440, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:51:40,506] [INFO] [cli] - Order placed successfully: {'orderId': 12880591440, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:52:01,114] [INFO] [client] - Binance Futures Testnet client initialised.
+[2026-03-19 19:52:01,115] [INFO] [orders] - Placing LIMIT SELL order: 0.002 BTCUSDT @ 90000.0
+[2026-03-19 19:52:01,115] [DEBUG] [client] - POST https://testnet.binancefuture.com/fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.002, 'price': 90000.0, 'timeInForce': 'GTC', 'timestamp': 1773930121115}
+[2026-03-19 19:52:01,706] [DEBUG] [client] - Response [200]: {"orderId":12880593540,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"qP23MscOsRHsIp474QlDHU","price":"90000.00","avgPrice":"0.00","origQty":"0.002","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1773930121595}
+[2026-03-19 19:52:01,706] [INFO] [orders] - LIMIT order result: {'orderId': 12880593540, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
+[2026-03-19 19:52:01,707] [INFO] [cli] - Order placed successfully: {'orderId': 12880593540, 'status': 'NEW', 'executedQty': '0.000', 'avgPrice': '0.00'}
