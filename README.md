@@ -65,27 +65,28 @@ python-dotenv
 
 ---
 
-## Configuration
+## Usage
 
-The bot loads API credentials from environment variables. **Never hardcode keys in source code.**
+All commands are run from the project root directory.
 
-### Option A — Export in your shell
+### MARKET BUY Order
 
 ```bash
-export BINANCE_API_KEY="your_testnet_api_key"
-export BINANCE_API_SECRET="your_testnet_api_secret"
+python cli.py --symbol BTCUSDT --side BUY --order-type MARKET --quantity 0.001
 ```
 
-### Option B — `.env` file (recommended)
+### LIMIT SELL Order
 
-Create a `.env` file in the project root:
-
-```
-BINANCE_API_KEY=your_testnet_api_key
-BINANCE_API_SECRET=your_testnet_api_secret
+```bash
+python cli.py --symbol ETHUSDT --side SELL --order-type LIMIT --quantity 0.5 --price 2000.00
 ```
 
-> ⚠️ `.env` is listed in `.gitignore` and will never be committed to version control.
+### STOP_LIMIT Order
+
+```bash
+python cli.py --symbol BTCUSDT --side SELL --order-type STOP_LIMIT \
+    --quantity 0.001 --price 29500.00 --stop-price 29600.00
+```
 
 ---
 
@@ -160,3 +161,6 @@ Trading-bot/
 └── logs/                    # Auto-created at runtime
     └── trading_bot.log
 ```
+
+---
+
